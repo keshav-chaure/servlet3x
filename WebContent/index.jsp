@@ -17,5 +17,15 @@
     <c:out value="${requestScope.name }" ></c:out>
     <c:out value="${requestScope.htmlTagData}" escapeXml="true"></c:out>
 </form>
+
+
+
+<c:forEach items="${requestScope.stdList}" var="std">
+<li><td><c:out value="${std.roll}"></c:out></li>
+<li><c:out value="${std.name}"></c:out></li>
+<c:if test="${std.roll ne 1 }">
+<c:out value=" not equels to one " escapeXml="true"></c:out>
+</c:if>
+</c:forEach>
 </body>
 </html>
